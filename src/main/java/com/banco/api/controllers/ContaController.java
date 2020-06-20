@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -59,19 +58,4 @@ public class ContaController {
 		return updatedConta;
 	}
 	
-/*	
-	@CrossOrigin(origins = "http://localhost:4200")
-	@PatchMapping("/{id}")
-	public @ResponseBody Conta update(@PathVariable Long id, @RequestBody Map<Object, Object> fields) {
-		Conta conta = contaService.findById(id);
-	    
-		fields.forEach((k, v) -> {
-	        Field field = ReflectionUtils.findRequiredField(Conta.class, (String) k);
-	        ReflectionUtils.setField(field, conta, v);
-	    });
-		
-		final Conta updatedConta = contaService.insert(conta);
-		return updatedConta;
-	}
-*/
 }
